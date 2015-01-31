@@ -9,7 +9,7 @@ $app = new \Slim\Slim(array(
 // Create monolog logger and store logger in container as singleton 
 // (Singleton resources retrieve the same log resource definition each time)
 $app->container->singleton('log', function () {
-    $log = new \Monolog\Logger('slim-skeleton');
+    $log = new \Monolog\Logger('slim-skeleton-phpunit');
     $log->pushHandler(new \Monolog\Handler\StreamHandler('../logs/app.log', \Monolog\Logger::DEBUG));
     return $log;
 });
@@ -28,7 +28,7 @@ $app->view->parserExtensions = array(new \Slim\Views\TwigExtension());
 // Define routes
 $app->get('/', function () use ($app) {
     // Sample log message
-    $app->log->info("Slim-Skeleton '/' route");
+    $app->log->info("Slim-Skeleton-PHPUnit '/' route");
     // Render index view
     $app->render('index.html');
 });
