@@ -22,6 +22,14 @@ Replace <code>[my-app-name]</code> with the desired directory name for your new 
 
 That's it! Now go build something cool.
 
+## How to test
+
+After install the application, run this command from the directory.
+
+    make test
+
+Test codes are in `tests/`.
+
 ## How to Contribute
 
 ### Pull Requests
