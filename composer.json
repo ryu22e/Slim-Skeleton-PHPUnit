@@ -1,7 +1,7 @@
 {
     "name": "ryu22e/slim-skeleton-phpunit",
     "description": "A Slim Framework skeleton application for rapid development",
-    "keywords": ["microframework","rest","router","phpunit"],
+    "keywords": ["microframework","rest","router","phpunit","goutte"],
     "homepage": "http://github.com/ryu22e/Slim-Skeleton-PHPUnit",
     "license": "MIT",
     "authors": [
