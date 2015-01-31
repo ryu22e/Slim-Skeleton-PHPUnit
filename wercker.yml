@@ -1,0 +1,23 @@
+box: wercker/php
+build:
+    steps:
+        - script:
+            name: activate php 5.5
+            code: |-
+                phpenv global 5.5
+        - leipert/composer-install
+        - script:
+            name: run test
+            code: |-
+                make test
+    after-steps:
+        - mies/email-notify:
+            from: $REPLY_EMAIL_ADDRESSES
+            to: $NOTIFY_EMAIL_ADDRESSES
+            username: $NOTIFY_EMAIL_USERNAME
+            password: $NOTIFY_EMAIL_PASSWORD
+            host: $NOTIFY_EMAIL_HOSTNAME:$NOTIFY_EMAIL_PORT
+            on: failed
+            failed-body: Wercker failed <$WERCKER_BUILD_URL>
+        - wantedly/pretty-slack-notify:
+            webhook_url: $SLACK_WEBHOOK_URL
