@@ -44,3 +44,5 @@ pull request for each branch. This allows us to review and pull in new features 
 ### Style Guide
 
 All pull requests must adhere to the [PSR-2 standard](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md).
+
+[![wercker status](https://app.wercker.com/status/8b1104342e19aab2f13e827d1da1c04c/m "wercker status")](https://app.wercker.com/project/bykey/8b1104342e19aab2f13e827d1da1c04c)
